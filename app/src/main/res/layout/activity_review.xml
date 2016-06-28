@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical"
+              android:scrollbars="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="back"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btnback"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="4"
+            android:gravity="bottom"
+            android:text="@string/order_details"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="13pt"/>
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="next"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_item_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_earned"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:gravity="center"
+                    android:text="@string/item_price"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="@string/tip"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:gravity="center"
+                    android:text="@string/earned"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_order_title_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/order_title"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="10pt"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ico_directions"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/deliver_to"
+                        android:textColor="@android:color/black"
+                        android:textSize="10pt"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_review_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Dallas"
+                        android:textColor="@android:color/black"
+                        android:textSize="10pt"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ico_map"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_arrive_time"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Dallas"
+                android:textColor="@android:color/black"
+                android:textSize="10pt"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/open"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="10pt"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/order_items"
+                android:textColor="@android:color/black"
+                android:textSize="10pt"/>
+
+            <LinearLayout
+                android:id="@+id/ll_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/bt_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="postOrder"
+                    android:text="@string/post_order"
+                    android:textColor="@android:color/white"
+                    android:textSize="8pt"/>
+
+                <Button
+                    android:id="@+id/bt_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/bt_1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="deliverOrder"
+                    android:text="@string/deliver_order"
+                    android:textColor="@android:color/white"
+                    android:textSize="8pt"/>
+
+                <Button
+                    android:id="@+id/bt_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/bt_2"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:onClick="messageOrder"
+                    android:text="@string/messages_order"
+                    android:textColor="@android:color/white"
+                    android:textSize="8pt"/>
+
+                <Button
+                    android:id="@+id/bt_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/bt_3"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="flagOrder"
+                    android:text="@string/flag_order"
+                    android:textColor="@android:color/white"
+                    android:textSize="8pt"/>
+
+                <Button
+                    android:id="@+id/bt_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/bt_4"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="cancelOrder"
+                    android:text="@string/cancel_order"
+                    android:textColor="@android:color/white"
+                    android:textSize="8pt"/>
+
+                <Button
+                    android:id="@+id/bt_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/bt_5"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="deleteOrder"
+                    android:text="@string/delete_order"
+                    android:textColor="@android:color/white"
+                    android:textSize="8pt"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

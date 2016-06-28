@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+<EditText
+    android:id="@+id/et_order_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/order_title"
+    android:gravity="center_vertical"
+    android:textSize="10pt"
+    android:layout_marginTop="20dp"
+    android:singleLine="true"
+    />
+    <LinearLayout
+        android:id="@+id/ll_order_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="30dp">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/add_item"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_light"
+        android:background="@android:color/white"
+        android:onClick="addItem"
+        />
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    >
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:orientation="horizontal"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="0dp"
+        android:background="@android:color/holo_blue_dark">
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/btnback"
+            android:scaleType="fitCenter"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_gravity="center"
+            android:onClick="back"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:text="@string/place_order"
+            android:textAlignment="center"
+            android:textSize="13pt"
+            android:textColor="@android:color/white"
+            android:gravity="bottom"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="@string/next"
+            android:visibility="invisible"
+            android:onClick="next"/>
+        <ImageButton
+            android:id="@+id/ib_next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:onClick="imageButtonAction"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_deliver_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/holo_red_light"
+        android:visibility="visible"
+        >
+        <TextView
+            android:id="@+id/tv_deliver_num"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:text="You have 0 delivers"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="7pt"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="List"
+                android:textSize="7pt"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@android:color/holo_red_light"
+                android:background="@android:color/white"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:onClick="showList"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Map"
+                android:textSize="7pt"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@android:color/holo_red_light"
+                android:background="@android:color/white"
+                android:layout_marginBottom="1dp"
+                android:onClick="showMap"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        </LinearLayout>
+    </ScrollView>
+
+        <ListView
+            android:id="@+id/lv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            >
+
+        </ListView>
+
+
+
+</LinearLayout>

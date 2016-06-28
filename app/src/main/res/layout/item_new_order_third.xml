@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:map="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deliver_to"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="6"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textSize="10pt"
+        android:textColor="@android:color/holo_red_light"
+        android:text="@string/use_current_location"
+        android:background="@android:color/white"/>
+
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+        android:paddingLeft="25dp"
+        android:textSize="10pt"
+        android:layout_marginTop="15dp"
+        />
+    <EditText
+        android:id="@+id/et_zip_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/zip_code"
+        android:paddingLeft="25dp"
+        android:textSize="10pt"
+        android:layout_marginTop="15dp"
+        />
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        android:paddingLeft="25dp"
+        android:textSize="10pt"
+        android:layout_marginTop="15dp"
+        />
+    <com.google.android.gms.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        map:mapType="normal"
+        >
+
+    </com.google.android.gms.maps.MapView>
+
+</LinearLayout>
